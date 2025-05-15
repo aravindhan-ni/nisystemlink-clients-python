@@ -1,35 +1,34 @@
 from typing import List, Literal, Union
 
 class ExecutionEventBase:
-    """
-    Base class for execution events, containing common attributes such as action,
-    the time the event was triggered, and the user who triggered it.
-    """
     action: str
+    """Base class for execution events, containing common attributes such as action."""
+
     triggeredAt: str
+    """the time the event was triggered."""
+
     triggeredBy: str = None
+    """and the user who triggered it."""
+
 
 class NotebookExecutionEvent(ExecutionEventBase):
-    """
-    Represents an execution event triggered by a notebook.
-    Includes the type identifier and the execution ID.
-    """
     type: Literal['NOTEBOOK']
+    """Represents an execution event triggered by a notebook."""
+
     executionId: str
+    """Includes the type identifier and the execution ID."""
+
 
 class JobExecutionEvent(ExecutionEventBase):
-    """
-    Represents an execution event triggered by a job.
-    Includes the type identifier and a list of job IDs.
-    """
     type: Literal['JOB']
+    """Represents an execution event triggered by a job."""
+
     jobIds: List[str]
+    """Includes the type identifier and a list of job IDs."""
+
 
 class ManualExecutionEvent(ExecutionEventBase):
-    """
-    Represents an execution event triggered manually.
-    Includes only the type identifier.
-    """
     type: Literal['MANUAL']
+    """Represents an execution event triggered manually. Includes only the type identifier."""
 
 ExecutionEvent = Union[NotebookExecutionEvent, ManualExecutionEvent, JobExecutionEvent]
