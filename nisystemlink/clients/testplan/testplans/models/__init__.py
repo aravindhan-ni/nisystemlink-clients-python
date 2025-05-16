@@ -1,3 +1,9 @@
 from ._test_plan import TestPlan
+from ._schedule_test_plans import ScheduleTestPlansRequestBody, ScheduleTestPlansResponse
+from ._query_test_plans import QueryTestPlansRequestBody, QueryTestPlansResponse
+from ._update_test_plans import UpdateTestPlansRequestBody, UpdateTestPlansResponse
+from ._execution_definition import ExecutionDefinition
+from ._create_test_plans import CreateTestPlansRequestBody, CreateTestPlansResponse
+from ._delete_test_plans import DeleteTestPlansRequest, DeleteTestPlansResponse
 
 # flake8: noqa

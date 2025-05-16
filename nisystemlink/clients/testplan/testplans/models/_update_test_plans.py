@@ -2,7 +2,7 @@ from typing import List, Optional, Dict, Any, Union
 
 from nisystemlink.clients.core import ApiError
 from nisystemlink.clients.core._uplink._json_model import JsonModel
-from nisystemlink.clients.testplan.models._test_plan import TestPlan
+from . import TestPlan
 
 class UpdateTestPlanRequestBodyContent(JsonModel):
     id: str
