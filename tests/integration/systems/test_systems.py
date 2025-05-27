@@ -146,7 +146,7 @@ class TestSystemsClient:
         self, client: SystemsClient
     ):
         query_systems_request = QuerySystemsRequest(
-            filter='grains.data.localhost != "" && grains.data.master != ""',
+            filter="grains.data.host != null && grains.data.master != null",
             projection="new(id, alias, grains.data.master as master , grains.data.host as host)",
             take=1,
         )
