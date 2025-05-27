@@ -26,7 +26,7 @@ def client(enterprise_config: HttpConfiguration) -> SystemsClient:
     return SystemsClient(enterprise_config)
 
 
-workspace_id = "33eba2fe-fe42-48a1-a47f-a6669479a8aa"
+workspace_id = "2300760d-38c4-48a1-9acb-800260812337"
 """Constant represent id of the workspace."""
 
 
