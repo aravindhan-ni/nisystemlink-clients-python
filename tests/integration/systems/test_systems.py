@@ -27,7 +27,8 @@ def client(enterprise_config: HttpConfiguration) -> SystemsClient:
 
 
 workspace_id = "2300760d-38c4-48a1-9acb-800260812337"
-"""Constant represent id of the workspace."""
+"""Used the main-test default workspace since the client
+for creating a workspace has not been added yet"""
 
 
 @pytest.fixture
@@ -147,7 +148,7 @@ class TestSystemsClient:
     ):
         query_systems_request = QuerySystemsRequest(
             filter="grains.data.host != null && grains.data.master != null",
-            projection="new(id, alias, grains.data.master as master , grains.data.host as host)",
+            projection="new(id, alias, grains.data.master as master, grains.data.host as host)",
             take=1,
         )
         response: QuerySystemsResponse = client.query_systems(
