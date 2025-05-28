@@ -28,7 +28,7 @@ def client(enterprise_config: HttpConfiguration) -> SystemsClient:
 
 workspace_id = "2300760d-38c4-48a1-9acb-800260812337"
 """Used the main-test default workspace since the client
-for creating a workspace has not been added yet"""
+for creating a workspace has not been added yets"""
 
 
 @pytest.fixture
